@@ -2,6 +2,7 @@
   "name": "<%= appname %>",
   "version": "0.0.0",
   "description": "<%= description %>",
+  "repository": "githubUser/<%= appname %>",
   "main": "index.js",
   "files": [
     "app"
