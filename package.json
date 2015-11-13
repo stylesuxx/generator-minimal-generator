@@ -1,0 +1,26 @@
+{
+  "name": "generator-minimal-generator",
+  "version": "0.0.0",
+  "description": "Yeoman generator that generates a minimal yeoman generator.",
+  "main": "index.js",
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Landa <stylesuxx@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "minimal",
+    "minimal generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.21.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.9.0"
+  }
+}
