@@ -20,7 +20,7 @@ test('generator:app', function (t) {
         'package.json',
         '.gitignore',
         'app/index.js',
-        'templates/.gitignore'
+        'app/templates/.gitignore'
       ];
 
       assert.file(expected);
