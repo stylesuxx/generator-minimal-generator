@@ -4,7 +4,7 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
 
 test('generator:app', function (t) {
-  t.plan(3);
+  t.plan(4);
 
   helpers.run(path.join(__dirname, '../app'))
     .withPrompts({
@@ -39,5 +39,9 @@ test('generator:app', function (t) {
       assert.fileContent('README.md', 'mkdir generator-my-generator');
       assert.fileContent('README.md', 'yo generator-my-generator');
       t.ok(true, 'fills README.md with project data');
+
+      assert.fileContent('app/index.js', 'this.author = { name: \'Some Name\', email: \'some@name.tld\'};');
+      t.ok(true, 'fills app/index.js with correct information');
+
     });
 });
