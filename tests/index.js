@@ -11,7 +11,8 @@ test('generator:app', function (t) {
       name: 'my generator',
       description: 'A test generator',
       authorName: 'Some Name',
-      authorEmail: 'some@name.tld'
+      authorEmail: 'some@name.tld',
+      githubUser: 'someusername'
     })
     .on('end', function() {
       var expected = [
@@ -30,7 +31,7 @@ test('generator:app', function (t) {
         keywords: ['yeoman-generator'],
         description: 'A test generator',
         author: 'Some Name <some@name.tld>',
-        repository: "githubUser/generator-my-generator"
+        repository: "someusername/generator-my-generator"
       });
       t.ok(true, 'fills package.json with correct information');
 
