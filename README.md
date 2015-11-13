@@ -13,3 +13,13 @@ To invoke the generator create a directory for the generator and run it:
 
     mkdir generator-my-generator
     yo minimal-generator
+
+## Structure
+After invoking the generator you are left with a yeoman generator project with the following folder structure:
+
+    project-root
+    ├── .gitignore
+    ├── package.json
+    ├── README.md
+    └── app
+        └── index.js
