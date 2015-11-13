@@ -28,7 +28,8 @@ test('generator:app', function (t) {
         name: 'generator-my-generator',
         keywords: ['yeoman-generator'],
         description: 'A test generator',
-        author: 'Some Name <some@name.tld>'
+        author: 'Some Name <some@name.tld>',
+        repository: "githubUser/generator-my-generator"
       });
       t.ok(true, 'fills package.json with correct information');
 
