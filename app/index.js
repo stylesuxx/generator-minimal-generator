@@ -57,7 +57,7 @@ module.exports = generators.Base.extend({
       this.prompt({
         type: 'input',
         name: 'authorName',
-        message: 'Your name',
+        message: 'Author name',
         default: this.author.name
       }, function(answers) {
         this.author.name = answers.authorName;
@@ -71,7 +71,7 @@ module.exports = generators.Base.extend({
       this.prompt({
         type: 'input',
         name: 'authorEmail',
-        message: 'Your E-Mail address',
+        message: 'Author E-Mail address',
         default: this.author.email
       }, function(answers) {
         this.author.email = answers.authorEmail;
@@ -79,6 +79,20 @@ module.exports = generators.Base.extend({
         done();
       }.bind(this));
     },
+
+    githubUser: function() {
+      var done = this.async();
+      this.prompt({
+        type: 'input',
+        name: 'githubUser',
+        message: 'Github username',
+        default: 'github'
+      }, function(answers) {
+        this.githubUser = answers.githubUser;
+
+        done();
+      }.bind(this));
+    }
   },
 
   writing: {
