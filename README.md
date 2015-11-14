@@ -1,7 +1,7 @@
 # Generator Minimal Generator
 [![Build pass](https://travis-ci.org/stylesuxx/generator-minimal-generator.svg?branch=master)](https://travis-ci.org/stylesuxx/generator-minimal-generator?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/generator-minimal-generator.svg)](https://david-dm.org/stylesuxx/generator-minimal-generator)
 
->A yeoman generator that generates a minimal yeoman generator.
+>A yeoman generator that generates a minimal yeoman generator without introducing any dependencies you do not need.
 
 ## Installation
 Install the generator globally:
@@ -23,6 +23,14 @@ After invoking the generator you are left with a yeoman generator project with t
     ├── README.md
     └── app
         └── index.js
+
+## First Steps
+After generation you are left with a minimal generator that only prompts for app name. All default yeoman  [contexts](http://yeoman.io/authoring/running-context.html) are available in *app/index.js* and are mostly empty.
+
+If you are not yet fond of yeoman generator development I highly suggest to go through the excellent [yeoman documentation](http://yeoman.io/authoring/).
+
+## Development
+If you find a bug or run into any problems with this generator feel free to post to the issue section. If you made an addition I would be happy to see a PR for it.
 
 ## [MIT](https://opensource.org/licenses/MIT) License
 Copyright (c) 2105 Chris Landa
