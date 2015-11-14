@@ -1,0 +1,18 @@
+{
+  "name": "<%= appname %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "repository": "<%= githubUser %>/<%= appname %>",
+  "main": "index.js",
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "<%= author.name %> <<%= author.email %>>",
+  "license": "ISC",
+  "keywords": [
+    "yeoman-generator"
+  ]
+}
