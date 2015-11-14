@@ -23,3 +23,6 @@ After invoking the generator you are left with a yeoman generator project with t
     ├── README.md
     └── app
         └── index.js
+
+## License
+[MIT](https://opensource.org/licenses/MIT)
