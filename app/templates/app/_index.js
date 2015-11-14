@@ -1,9 +1,17 @@
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
+  helper: {
+    cleanAppname: function(appname) {
+      var appname = appname.replace(/\s/g, '-');
+
+      return appname;
+    }
+  },
+
   initializing: function() {
-    this.author = { name: 'Full Name', email: 'handle@domain.tld'};
-    this.appname = this.appname.replace(' ', '-');
+    this.author = { name: '<%= author.name %>', email: '<%= author.email %>'};
+    this.appname = cleanAppname(this.appname);
   },
 
   prompting: {
@@ -12,11 +20,11 @@ module.exports = generators.Base.extend({
 
       this.prompt({
         type: 'input',
-        name: 'name',
+        name: 'appname',
         message: 'Generator name',
         default: this.appname
       }, function(answers) {
-        this.appname = answers.name;
+        this.appname = cleanAppname(answers.appname);
 
         done();
       }.bind(this));

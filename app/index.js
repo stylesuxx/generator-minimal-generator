@@ -2,13 +2,21 @@
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
+  helper: {
+    cleanAppname: function(appname) {
+      var appname = appname.replace(/\s/g, '-');
+      var prefix = 'generator-';
+      if(appname.slice(0, prefix.length) !== prefix) {
+        appname = prefix + appname;
+      }
+
+      return appname;
+    }
+  },
+
   initializing: function() {
     this.author = { name: 'Full Name', email: 'handle@domain.tld'};
-    this.appname = this.appname.replace(/\s/g, '-');
-    var prefix = 'generator-';
-    if(this.appname.slice(0, prefix.length) !== prefix) {
-      this.appname = prefix + this.appname;
-    }
+    this.appname = this.helper.cleanAppname(this.appname);
     this.description = 'Generator description';
     this.packages = ['yeoman-generator'];
   },
@@ -23,7 +31,7 @@ module.exports = generators.Base.extend({
         message: 'Generator name',
         default: this.appname
       }, function(answers) {
-        this.appname = answers.name;
+        this.appname = this.helper.cleanAppname(answers.name);
 
         done();
       }.bind(this));
@@ -48,11 +56,11 @@ module.exports = generators.Base.extend({
       var done = this.async();
       this.prompt({
         type: 'input',
-        name: 'name',
-        message: 'Your name',
+        name: 'authorName',
+        message: 'Author name',
         default: this.author.name
       }, function(answers) {
-        this.author.name = answers.name;
+        this.author.name = answers.authorName;
 
         done();
       }.bind(this));
@@ -62,20 +70,35 @@ module.exports = generators.Base.extend({
       var done = this.async();
       this.prompt({
         type: 'input',
-        name: 'email',
-        message: 'Your E-Mail address',
+        name: 'authorEmail',
+        message: 'Author E-Mail address',
         default: this.author.email
       }, function(answers) {
-        this.author.email = answers.email;
+        this.author.email = answers.authorEmail;
 
         done();
       }.bind(this));
     },
+
+    githubUser: function() {
+      var done = this.async();
+      this.prompt({
+        type: 'input',
+        name: 'githubUser',
+        message: 'Github username',
+        default: 'github'
+      }, function(answers) {
+        this.githubUser = answers.githubUser;
+
+        done();
+      }.bind(this));
+    }
   },
 
   writing: {
     copyStatics: function() {
       this.copy('.gitignore', '.gitignore');
+      this.copy('.gitignore', 'app/templates/.gitignore');
     },
 
     copyTemplates: function() {
