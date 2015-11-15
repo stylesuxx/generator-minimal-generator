@@ -19,6 +19,7 @@ module.exports = generators.Base.extend({
     this.appname = this.helper.cleanAppname(this.appname);
     this.description = 'Generator description';
     this.packages = ['yeoman-generator'];
+    this.year = new Date().getFullYear();
   },
 
   prompting: {
