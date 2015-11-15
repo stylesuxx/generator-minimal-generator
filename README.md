@@ -1,5 +1,5 @@
 # Generator Minimal Generator
-[![npm version](https://badge.fury.io/js/generator-minimal-generator.svg)](https://badge.fury.io/js/generator-minimal-generator) [![Build pass](https://travis-ci.org/stylesuxx/generator-minimal-generator.svg?branch=master)](https://travis-ci.org/stylesuxx/generator-minimal-generator?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/generator-minimal-generator.svg)](https://david-dm.org/stylesuxx/generator-minimal-generator)
+[![npm version](https://badge.fury.io/js/generator-minimal-generator.svg)](https://badge.fury.io/js/generator-minimal-generator) [![Build pass](https://travis-ci.org/stylesuxx/generator-minimal-generator.svg?branch=master)](https://travis-ci.org/stylesuxx/generator-minimal-generator?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/generator-minimal-generator.svg)](https://david-dm.org/stylesuxx/generator-minimal-generator) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stylesuxx/generator-minimal-generator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 >A yeoman generator that generates a minimal yeoman generator without introducing any dependencies you do not need.
 
