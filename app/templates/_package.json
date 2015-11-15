@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "<%= author.name %> <<%= author.email %>>",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "yeoman-generator"
   ]
