@@ -1,6 +1,6 @@
 {
   "name": "generator-minimal-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator that generates a minimal yeoman generator.",
   "repository": "stylesuxx/generator-minimal-generator",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "test": "node ./tests/index.js"
   },
   "author": "Chris Landa <stylesuxx@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "yeoman-generator",
     "generator",
