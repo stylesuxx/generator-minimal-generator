@@ -11,7 +11,7 @@ module.exports = generators.Base.extend({
 
   initializing: function() {
     this.author = { name: '<%= author.name %>', email: '<%= author.email %>'};
-    this.appname = cleanAppname(this.appname);
+    this.appname = this.helper.cleanAppname(this.appname);
   },
 
   prompting: {
@@ -24,7 +24,7 @@ module.exports = generators.Base.extend({
         message: 'Generator name',
         default: this.appname
       }, function(answers) {
-        this.appname = cleanAppname(answers.appname);
+        this.appname = this.helper.cleanAppname(answers.appname);
 
         done();
       }.bind(this));
