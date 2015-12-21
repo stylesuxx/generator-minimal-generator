@@ -19,7 +19,8 @@
     "minimal generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.21.1"
+    "yeoman-generator": "^0.22.1",
+    "yeoman-test": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^1.9.0",
