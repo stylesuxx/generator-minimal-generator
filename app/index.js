@@ -98,8 +98,7 @@ module.exports = generators.Base.extend({
 
   writing: {
     copyStatics: function() {
-      this.copy('.gitignore', '.gitignore');
-      this.copy('.gitignore', 'app/templates/.gitignore');
+      this.copy('_gitignore', '.gitignore');
     },
 
     copyTemplates: function() {
