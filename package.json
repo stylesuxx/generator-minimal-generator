@@ -1,6 +1,6 @@
 {
   "name": "generator-minimal-generator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Yeoman generator that generates a minimal yeoman generator.",
   "repository": "stylesuxx/generator-minimal-generator",
   "main": "index.js",
