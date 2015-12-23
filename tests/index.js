@@ -19,8 +19,7 @@ test('generator:app', function (t) {
         'README.md',
         'package.json',
         '.gitignore',
-        'app/index.js',
-        'app/templates/.gitignore'
+        'app/index.js'
       ];
 
       assert.file(expected);
